@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="3DVG">
+  <meta property="og:title" content="CSVG" />
+  <meta property="og:description" content="Constraint Satisfaction Visual Grounding" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/pipeline.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="3DVG;LLM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>CSVG</title>
+  <link rel="icon" type="image/x-icon" href="static/images/graduation-cap.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Solving Zero-Shot 3D Visual Grounding as Constraint Satisfaction
+              Problems</h1>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://anonymous.4open.science/r/csvg_bmvc-611D/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="has-text-centered">
+          <h2 class="title is-3">Gallery</h2>
+          <div id="results-carousel" class="carousel results-carousel hide-if-small has-text-justified">
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_00_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    this is a lamp. its white in color to the left of burgundy drapes.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_01_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    there is a rectangular whiteboard. it is on the wall and to the left of a monitor.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_02_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    these are the curtains over the windows. they are just behind the bed.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_03_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    this is a dresser in the bedroom. it is near the right foot of the bed.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_04_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    the monitor is next to the leftmost window. the monitor is black and rectangular.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_05_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    the armchair is beige colored. it is to the left of the window.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_06_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    this is a brown bench. it is to the left of another bench.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_07_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    there is a silver table by the wall. it is next to the tv.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_08_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    this is a black file cabinet. it is in behind the backpack.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_09_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    there is a window. it is to the left of the desk and shelves.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              3D visual grounding (3DVG) aims to locate objects in a 3D scene with natural language descriptions.
+              Supervised methods have achieved decent accuracy, but have a closed vocabulary and limited language
+              understanding ability. Zero-shot methods mostly utilize large language models (LLMs) to handle natural
+              language descriptions, yet suffer from slow inference speed. To address these problems, in this work, we
+              propose a zero-shot method that reformulates the 3DVG task as a Constraint Satisfaction Problem (CSP),
+              where the variables and constraints represent objects and their spatial relations, respectively. This
+              allows a global reasoning of all relevant objects, producing grounding results of both the target and
+              anchor objects. Moreover, we demonstrate the flexibility of our framework by handling negation- and
+              counting-based queries with only minor extra coding efforts. Our system, Constraint Satisfaction Visual
+              Grounding (CSVG), has been extensively evaluated on the public datasets ScanRefer and Nr3D datasets using
+              only open-source LLMs. Results show the effectiveness of CSVG and superior grounding accuracy over current
+              state-of-the-art zero-shot 3DVG methods with improvements of +7.0% (Acc@0.5 score) and +11.2% on the
+              ScanRefer and Nr3D datasets, respectively.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="has-text-centered">
+          <h3 class="title is-5">Handling More Complex Queries</h3>
+          <div>Here we demonstrate queries using min/max constraints, negative variables and counting-based logics.
+          </div>
+          <div id="results-carousel" class="carousel results-carousel hide-if-small has-text-justified">
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_20_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    the table without monitors on it.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_21_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    the desk without any backpack on it.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_22_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    the second chair from the copier.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_23_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    the third chair away from the table with a lamp on it.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_24_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    the tall trash can. the trash can is under the sink counter.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_25_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    the table is the closest one to the entrance door. the table is light brown and square.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_26_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    a black desk chair. it is the one closest to the black bin.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_27_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    the chair is a dark black or grey color. it is the chair closest to the door.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+            <!-- item -->
+            <div class="item item-video1">
+              <div class="carousel-item-div">
+                <video poster="" id="video1" autoplay muted loop height="100%" width="70%">
+                  <!-- Your video file here -->
+                  <source src="static/videos/video_28_h264.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                  <div style="vertical-align: middle; display: table-cell;">
+                    there are black plastic chairs around the kitchen table. look for the one closest to the
+                    refrigerator.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of item -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+
+        <iframe src="static/pdfs/quali_eval.pdf" width="100%" height="550">
+        </iframe>
+
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+  <!-- Teaser video-->
+  <section class="hero">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/quali-eval.png" />
+        <h2 class="subtitle has-text-centered">
+          Some grounding results and comparison with <a href="https://curryyuan.github.io/ZSVG3D/">ZSVG3D</a>.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
